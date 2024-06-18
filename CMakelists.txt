@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.10)
+project(MusicPlayer)
+
+set(CMAKE_C_STANDARD 11)
+
+include_directories(include)
+add_library(linkedlist libs/linkedlist.c)
+add_library(textfilewriter libs/textfilewriter.c)
+
+add_executable(Player src/Player.c)
+target_link_libraries(Player linkedlist textfilewriter)
+
+enable_testing()
+add_executable(PlayerTest tst/PlayerTest.cc)
+target_link_libraries(PlayerTest linkedlist textfilewriter gtest gtest_main)
+
