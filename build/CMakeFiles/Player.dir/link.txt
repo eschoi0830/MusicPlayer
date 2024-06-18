@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/Player.dir/src/Player.c.o CMakeFiles/Player.dir/libs/linkedlist.c.o CMakeFiles/Player.dir/libs/textfilewriter.c.o -o Player
